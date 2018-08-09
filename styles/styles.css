@@ -1,4 +1,7 @@
 
+*{
+    box-sizing: border-box;
+}
 body{
     /*background-color:rgb(65, 29, 88);*/
     background-color:#212121;
@@ -6,9 +9,9 @@ body{
 }
 div.id-container{
     display:flex;
-    flex-direction:row;
+    flex-direction:row !important;
     align-items: center;
-    justify-content: center;
+    justify-content:space-evenly;
     height:100%;
     padding:0;
     margin:90px 0;
@@ -65,13 +68,15 @@ h2{
     /*border-bottom:1px solid rgb(59, 59, 59);*/
     color:white;
     height:40px;
-    padding-top:20px;
+    padding-top:10px;
+    width:350px;
     
 }
 
 ul{
     padding:0 50px;
-    background-color:#FFFFFF;
+    /*background-color:#FFFFFF;*/
+    background-color:#673AB7;
     margin-bottom:0px;
 }
 
@@ -81,6 +86,8 @@ li{
     text-align: left;
     list-style: none;
     padding-bottom: 40px;
+    color:#fff;
+    font-weight: 400;
 }
 li:first-child{
     padding-top:30px;
