@@ -89,10 +89,3 @@ li:first-child{
 div.ids-card{
     width:350px;
 }
-div.ids-card:nth-child(1){
-    display:none !important;
-}
-div.ids-card:nth{
-    display:block;
-    width:350px;
-}

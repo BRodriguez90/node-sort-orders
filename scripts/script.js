@@ -1,17 +1,17 @@
 $(function(){
 
     //Grabbing ul dom elements 
-    const $orders_list = $('#orders_list');
-    const $toyota_list = $('#toyota_ids');
-    const $ford_list = $('#ford_ids');
-    const $landrover_list = $('#landrover_ids');
-    const $algonquin_list = $('#algonquin_ids');
-    const $error_list = $('#error_ids');
+    const $orders_list = $('#orders_list'),
+          $toyota_list = $('#toyota_ids'),
+          $ford_list = $('#ford_ids'),
+          $landrover_list = $('#landrover_ids'),
+          $algonquin_list = $('#algonquin_ids'),
+          $error_list = $('#error_ids');
     //Regular Expressions
-    const $toyota = /^T([8-9][0-9][0-9]|1[0-9][0-9][0-9]|2000)\-(\w){4}$/;
-    const $ford = /^[AEIOU]{2}RE4([2-7]{3})$/;
-    const $land_rover = /^LR([2-4][0-9][0-9]|5[0][0])(v1|v2|v3)$/;
-    const $algonquin = /^[0-9]+\*[aeiou]{3}/;
+    const $toyota = /^T([8-9][0-9][0-9]|1[0-9][0-9][0-9]|2000)\-(\w){4}$/,
+          $ford = /^[AEIOU]{2}RE4([2-7]{3})$/,
+          $land_rover = /^LR([2-4][0-9][0-9]|5[0][0])(v1|v2|v3)$/,
+          $algonquin = /^[0-9]+\*[aeiou]{3}/;
 
     const makeList = (value,index) => `<li>Id = ${value}</li>`;  
 
