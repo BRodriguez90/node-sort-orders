@@ -75,8 +75,8 @@ h2{
 
 ul{
     padding:0 50px;
-    /*background-color:#FFFFFF;*/
-    background-color:#673AB7;
+    background-color:#fff;
+    /*background-color:#673AB7;*/
     margin-bottom:0px;
 }
 
@@ -86,7 +86,6 @@ li{
     text-align: left;
     list-style: none;
     padding-bottom: 40px;
-    color:#fff;
     font-weight: 400;
 }
 li:first-child{

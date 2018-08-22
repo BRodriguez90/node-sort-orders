@@ -1,5 +1,5 @@
 $(function(){
-
+  
     //Grabbing ul dom elements 
     const $orders_list = $('#orders_list'),
           $toyota_list = $('#toyota_ids'),
@@ -17,13 +17,13 @@ $(function(){
 
     $("#button").on('click', function(){
         if(!$orders_list.children().length){ //if list is empty fetch ids  
-            $(this).hide(); //hide get Ids button
+            //$(this).hide(); //hide get Ids button
             fetch('http://localhost:3000/') //grab json for order ids 
             .then(res => res.json())
             .then(response => {
                 console.log(response);
                 const {ordersArray} = response;
-           
+
                 ordersArray.map((value,index) => { //loop through each Id and create and list element for it
                     $orders_list.append(makeList(value,index));  //add main order IDs to orders list
                     //Testing ids against regular expressions
@@ -32,8 +32,8 @@ $(function(){
                           landrover_test = $land_rover.test(value),
                           algonquin_test = $algonquin.test(value);
                     //Function that appends IDs to the UL if they match the regEx
-                    const testIds = (regExp,variable) => {  
-                        if(regExp){
+                    const testIds = (regExpTest,variable) => {  
+                        if(regExpTest){
                             variable.append(makeList(value,index));
                         } 
                     }
