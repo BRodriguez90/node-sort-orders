@@ -6,9 +6,9 @@ const file = fs.readFileSync('../orders.txt', 'utf8').toString();
 const ordersArray = file.split(',');
 
 const $toyota = /^T([8-9][0-9][0-9]|1[0-9][0-9][0-9]|2000)\-(\w){4}$/,
-    $ford = /^[AEIOU]{2}RE4([2-7]{3})$/,
-    $land_rover = /^LR([2-4][0-9][0-9]|5[0][0])(v1|v2|v3)$/,
-    $algonquin = /^[0-9]+\*[aeiou]{3}/;
+      $ford = /^[AEIOU]{2}RE4([2-7]{3})$/,
+      $land_rover = /^LR([2-4][0-9][0-9]|5[0][0])(v1|v2|v3)$/,
+      $algonquin = /^[0-9]+\*[aeiou]{3}/;
 
 let toyotaIds = [],
     fordIds = [],
@@ -16,12 +16,14 @@ let toyotaIds = [],
     algonquinIds = [],
     errorIds = [];
 
-ordersArray.map((value, index) => {
+ordersArray.map((value,index) => {
+
     //Testing ids against regular expressions
     const toyota_test = $toyota.test(value),
-        ford_test = $ford.test(value),
-        landrover_test = $land_rover.test(value),
-        algonquin_test = $algonquin.test(value);
+          ford_test = $ford.test(value),
+          landrover_test = $land_rover.test(value),
+          algonquin_test = $algonquin.test(value);
+
     //function that takes regExp bool and pushes matching ids into array
     function testIds(regExpTest, arr){
         if (regExpTest) {
